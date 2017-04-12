@@ -6,9 +6,9 @@ categories: ruby blocks yield
 ---
 
 
-Ruby is a friendly language. The syntax and library of keywords make for a readable and accessible programmatic language. Such was Matsumoto's goal. That being said, there are plenty of ways that Ruby can get confusing or run counter to what you might be expecting. One specific keyword that I found initial confusing was `yield`. After learning the basics of Ruby, Yield looked different than anything I had seen before (or so I thought).
+Ruby is a friendly language. The syntax and library of keywords make for a readable and accessible programmatic language. Such was Matsumoto's goal. That being said, there are plenty of ways that Ruby can get confusing or run counter to what you might be expecting. One specific keyword that I found initial confusing was `yield`. After learning the basics of Ruby, `yield` looked different than anything I had seen before (or so I thought).
 
-To understand was Yield does and how it is implemented, lets first take one step back to talk about **blocks**.
+To understand was `yield` does and how it is implemented, lets first take one step back to talk about **blocks**.
 
 ### Blocks ###
 
@@ -31,7 +31,7 @@ OR
 [1, 2, 3].each {|n| puts "Number #{n}"}
 ```
 
-I'm not going to break down how an `each` loop works or explain the `n` as a `block parameter`, but it's important to know that blocks are common in Ruby. Blocks are chunks of code.
+I'm not going to break down how an `each` loop works or explain the `n` as a `block parameter`, but it's important to know that blocks are common in Ruby. Blocks are chunks of code. No biggie.
 
 ### Yield ###
 
@@ -49,13 +49,15 @@ simple_example do
 end
 ```
 And when this code gets run, it will return:
-```ruby
-"this is the top"
-"this is the yield"
-"this is the bottom"
+```
+this is the top
+this is the yield
+this is the bottom
 => nil
 ```
-Let's examine how we are calling the great method I defined, `#simple_example`. The method gets called **with a block**. I think this is what catches people off guard about `yield`. You can call a method with a block attached to it. That is exactly what `yield` is waiting to see. Think about it as a parameter to the method -- just some additional code that we are including.
+Let's examine how we are calling the simple method I defined, `#simple_example`. The method gets called **with a block**. I think this is what catches people off guard about `yield`. You can call a method with a block attached to it. That is exactly what `yield` is waiting to see. Think about it as a parameter to the method -- just some additional code that we are including.
+
+`yield` lets us _inject_ code into a method. This allows you to tweak how the method operates without having to rewrite the entire thing.  
 
 If the method doesn't have a `yield` inside of it, that additional code (in the block) will get skipped.
 
@@ -80,3 +82,13 @@ genius_example do |language, age|
   puts "#{language} is #{age} years old."
 end
 ```
+and this will give us:
+
+```
+Ruby is 22 years old.
+=> nil
+```
+
+Lastly, check out the return value. `yield` will returns the last evaluated expression from the block -- in this case `nil`. In other words, it will return what the block returns.
+
+Hopefully this gives us a basic understanding of how `yield` functions in the simplest terms. It only gets more complicated from here, but understanding how `yield` works at a very basic level can help you not be so thrown off when you see it a more complicated context.
