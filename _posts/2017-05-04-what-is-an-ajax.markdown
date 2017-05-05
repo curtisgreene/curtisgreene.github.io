@@ -17,7 +17,7 @@ Before I begin committing things to memory (or at least committing to bookmarkin
 
 ![apple jacks](https://media.giphy.com/media/ell2hMOHGVeo/giphy.gif "Apple Jacks don't taste like apples")
 
-Ajax is not a program, a tool, or a plugin -- It doesn't event taste like apples! -- its a concept. That's not to say that the implementation of Ajax doesn't add any concrete code to your program -- it definitely does -- but it doesn't introduce a new syntax or functions. It merely uses what Javascript has already built for us.
+Ajax is not a programming language, a tool, or a plugin -- It doesn't event taste like apples! -- its a concept. That's not to say that the implementation of Ajax doesn't add any concrete code to your program -- it definitely does -- but it doesn't introduce a new syntax or functions. It merely uses what Javascript has already built for us.
 
 Ajax is the method of exchanging data with a server, and updating parts of a web page – without reloading the entire page. Any way you can implement that functionality in a JS application falls under the umbrella of Ajax.
 
@@ -57,7 +57,7 @@ Here are a few features that we take for granted that Ajax makes possible:
 
 Long story short, now that you know what to look for, you'll start seeing Ajax or Ajax-like design all over the web.
 
-Therefore, it's definitely worth learning about. 
+Therefore, it's definitely worth learning about.
 
 ## Bonus Question: Any downsides? ##
 
