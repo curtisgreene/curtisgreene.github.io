@@ -69,7 +69,13 @@ const Person = ({ match }) => {
 
 
 
-By using ```match``` we are sending updated and current URL information to each of our people. The part of this that is recursive is the ```Route``` at the end of the ```Person``` component. That route is awaiting a path that is the current match's URL plus a new id. Once it has that, it renders a new instance of the Person component within the component is sits. Here we are creating nested components. And as we watch the path update, we are seeing our routes being written recursively.
+By using ```match``` we are sending updated and current URL information to each of our people. The part of this that is recursive is the ```Route``` at the end of the ```Person``` component. A Person is creating more people inside of it. This miracle of life could be dangerous if it creates an infinite loop, but luckily we have some conditional logic to help us.
+
+
+That route is awaiting a path that is the current match's URL plus a new id. Once it has that, it renders a new instance of the Person component within the component it sits. Here we are creating nested components
+
+
+And as we watch the path update, we are seeing our routes being written recursively.
 
 
 
