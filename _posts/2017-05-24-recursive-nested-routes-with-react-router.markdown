@@ -35,7 +35,7 @@ Now lets start building some components:
 ```javascript
 const MasterOfFun = () => (
   <Router>
-    <Person match={{ params: { id: 0 }, url: '' }}/>
+    <Person match={{ params: { id: 0}, url: '' }}/>
   </Router>
 )
 ```
