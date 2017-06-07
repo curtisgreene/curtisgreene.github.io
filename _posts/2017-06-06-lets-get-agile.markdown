@@ -4,9 +4,6 @@ title:  "Let's Get Agile!"
 date:   2017-06-06 08:16:01 -0600
 categories: software development agile
 ---
-
-# Let's Get Agile! #
-
 If you are a beginner programmer, either at school or teaching yourself, chances are you have come across a few topics that are mentioned frequently but explained rarely. I think 'algorithm' is a good example of this. 'Benchmarking' is another. One term that I'd like to shine some entry-level light onto is Agile.
 ## What is Agile? ##
 
